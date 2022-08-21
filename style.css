@@ -1,0 +1,39 @@
+.flag{
+    text-align: center;
+/*I want to make an italian flag as the background here*/
+    background: linear-gradient(#008000,#ffffff, #ff0000)
+/*I want to get rid of the space between h1 and h2*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*This is the code for clicking on the links*/
+a{
+    color:black;
+}
+
+a:visited{
+    color: black
+}
+
+a:hover{
+    color:red
+}
+
+a:active{
+    color:black
+}
