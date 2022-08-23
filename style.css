@@ -1,3 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+*{/*Universal*/
+    font-family: "Raleway";
+    box-sizing: border-box;
+}
+/*Navigation Bar*/
+.top-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /*moves the li away from the Logo*/
+    background-color: #00BAF0;
+    background: linear-gradient(to left, #ff0000,#ffffff, #008000);
+    color: white;
+    height: 50px;
+    padding: 1em;
+}
+.menu{
+    display: flex;
+    flex-direction: row; /*aligns the li in a row*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu>li{
+    margin: 0 1 rem;/*top_bottom, left_right*/
+    overflow: hidden;
+}
+.menu-button-container{
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-button,.menu-button::before,.menu-button::after{
+    display: block;
+    background-color:#ffffff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+.menu-button::before{
+    content: '';
+    margin-top: -8px;
+}
+.menu-button::after{
+    content:'';
+    margin-top: 8px;
+}
+/*This adds the Hamburger*/
+#menu-toggle:checked + .menu-button-container .menu-button::before{
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+} 
+@media (max-width: 700px){
+    .menu-button-container{
+        display: flex;
+    }
+.menu{
+    position: absolute;/*moves the hamburger to the right*/
+    top:0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;/*arranges the li into a column instead of a line*/
+    width: 100%;
+    justidy-content: center;
+    align-items: center;
+}
+#menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+/*hides the li*/
+transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+#menu-toggle:checked ~ .menu li {/*This creates the dropdown boxes*/
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {/*This makes dropdown boxes look nice*/
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+/*^^^Navigation Bar^^^*/
+.nav{
+    color:white;
+}
+
+.nav:visited{
+    color: white
+}
+
+.nav:hover{
+    color:white
+}
+
+.nav:active{
+    color:white
+}
+
+
 .flag{
     text-align: center;
 /*I want to make an italian flag as the background here*/
@@ -21,9 +146,11 @@
 
 
 
+
 /*This is the code for clicking on the links*/
 a{
     color:black;
+    text-decoration: none;
 }
 
 a:visited{
