@@ -143,60 +143,50 @@ body{
 #info-bar{
     display: flex;
     justify-content: space-around;
-
 }
 
-*{
-  box-sizing: border-box;
-}
 /*Picture styling*/
 img{
-  /*display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;*/
-  max-width: 1200px;
   margin: 0 2px;
-  padding: 5px 5px;
-  height: 500px;
-  width: 350px;
+  padding: 10px 10px;
+  height: 550px;
   border-radius: 20px;
 }
-/*first picture*/
-/*.img-top{
+
+.top-row{
+/*This is what puts the image and the description on the same line*/
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}*/
+  justify-content: space-around;
+}
 
 /*Ingredients*/
 .ingredients{
   background-color:rgb(204, 200, 197);
-  max-width: 350px;
   margin: 0 10px;
-  width: 345px;
+  min-width: 360px;
+  width: 360px;/*DO NOT CHANGE*/
   padding: 10px 10px;
   border-radius: 20px;
 }
-
 /*Description*/
 .description{
-  max-width: 700px;
-  margin: 0 10px;
-  width: 700px;
-  padding: 10px 10px;
+  height: 550px;
   border-radius: 20px;
+  margin: 0px 2px;
   border: 2px solid black;
 }
-.box{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
 
+.mid-row{
+  display: flex;
+  justify-content: space-around;
+}
+/*Instructions*/
+.instructions{
+  height: 550px;
+  border-radius: 20px;
+  margin: 0px 2px;
+  border: 2px solid black;
+}
 /*This is the code for clicking on the links*/
 a{
     color:black;
