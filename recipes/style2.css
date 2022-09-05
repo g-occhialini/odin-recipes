@@ -140,14 +140,18 @@ body{
     background:rgb(240, 236, 230) ;
 }
 
-#info-bar{
+.info-bar{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-around;
 }
 
+.img1{
+  margin: 0 2px;
+}
 /*Picture styling*/
 img{
-  margin: 0 2px;
   padding: 10px 10px;
   height: 550px;
   border-radius: 20px;
@@ -170,22 +174,33 @@ img{
 }
 /*Description*/
 .description{
-  height: 550px;
+  height: 540px;
   border-radius: 20px;
   margin: 0px 2px;
   border: 2px solid black;
+  padding: 5px;
+  padding-top: 0;
 }
 
 .mid-row{
   display: flex;
   justify-content: space-around;
+  height:800px;
 }
 /*Instructions*/
 .instructions{
-  height: 550px;
   border-radius: 20px;
   margin: 0px 2px;
   border: 2px solid black;
+  padding: 5px;
+}
+.images{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer{
+  text-align:center;
 }
 /*This is the code for clicking on the links*/
 a{

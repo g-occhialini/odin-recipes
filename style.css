@@ -12,12 +12,13 @@ html, body {
   font-family: "Raleway";
   box-sizing: border-box;
 }
-.top-nav {
+.top-nav, .menu{
   display: flex;
   flex-direction: row;
+}
+.top-nav {
   align-items: center;
   justify-content: space-between;
-  background-color: #00BAF0;
   background: linear-gradient(to left, red, white,green);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #FFF;
@@ -25,8 +26,6 @@ html, body {
   padding: 1em;
 }
 .menu {
-  display: flex;
-  flex-direction: row;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -123,11 +122,9 @@ html, body {
 .nav:visited{
     color: white
 }
-
 .nav:hover{
     color:white
 }
-
 .nav:active{
     color:white
 }
@@ -146,15 +143,12 @@ a{
     color:black;
     text-decoration: none;
 }
-
 a:visited{
     color: black
 }
-
 a:hover{
     color:red
 }
-
 a:active{
     color:black
 }
